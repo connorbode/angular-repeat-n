@@ -19,7 +19,7 @@
     "example",
     "src"
   ],
-  "dependencies": {
+  "devDependencies": {
     "angular": "~1.2.21",
     "angular-mocks": "~1.2.21"
   }
