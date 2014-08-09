@@ -16,8 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "example",
+    "src"
   ],
   "dependencies": {
     "angular": "~1.2.21",
