@@ -47,4 +47,36 @@ describe('angular-repeat-n', function () {
       expect(rootElem.children().length).toEqual(0);
     });
   });
+
+  it('deletes elements if the value is changed from numeric to non-numeric', function () {
+    $scope.repeat = 4;
+    var elem = compile('<div><div ng-repeat-n="repeat"></div></div>', $scope);
+    $scope.repeat = undefined;
+    $scope.$digest();
+    expect(elem.children().length).toEqual(0);
+  });
+
+  it('adds elements if the value is changed from non-numeric to numeric', function () {
+    $scope.repeat = undefined;
+    var elem = compile('<div><div ng-repeat-n="repeat"></div></div>', $scope);
+    $scope.repeat = 4;
+    $scope.$digest();
+    expect(elem.children().length).toEqual(4);
+  });
+
+  it('adds elements if the value is increased', function () {
+    $scope.repeat = 4;
+    var elem = compile('<div><div ng-repeat-n="repeat"></div></div>', $scope);
+    $scope.repeat = 5;
+    $scope.$digest();
+    expect(elem.children().length).toEqual(5);
+  });
+
+  it('removes elements if the value is decreased', function () {
+    $scope.repeat = 5;
+    var elem = compile('<div><div ng-repeat-n="repeat"></div></div>', $scope);
+    $scope.repeat = 4;
+    $scope.$digest();
+    expect(elem.children().length).toEqual(4);
+  });
 });
