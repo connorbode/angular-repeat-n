@@ -1,0 +1,25 @@
+{
+  "name": "angular-repeat-n",
+  "version": "0.0.1",
+  "homepage": "https://github.com/connorbode/angular-repeat-n",
+  "authors": [
+    "Connor Bode <connor.bode@gmail.com>"
+  ],
+  "description": "Angular directive used to repeat an HTML element n times.",
+  "main": "dist/angular-repeat-n.js",
+  "keywords": [
+    "angular",
+    "repeat"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21"
+  }
+}

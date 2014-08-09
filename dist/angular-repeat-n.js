@@ -4,6 +4,7 @@ angular.module('angular-repeat-n', [])
     return {
       restrict: 'A',
       link: function (scope, element, attrs) {
+        console.log('loaded');
       }
     };
   });

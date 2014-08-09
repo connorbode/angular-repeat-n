@@ -9,11 +9,14 @@
   "dependencies": {
     "body-parser": "^1.6.2",
     "express": "^4.8.2",
+    "gulp": "^3.8.7",
+    "gulp-shell": "^0.2.9",
     "morgan": "^1.2.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "node example/server.js"
   },
   "repository": {
     "type": "git",
