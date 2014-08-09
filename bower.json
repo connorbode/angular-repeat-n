@@ -17,7 +17,9 @@
     "node_modules",
     "bower_components",
     "example",
-    "src"
+    "src",
+    "gulpfile.js",
+    "package.json"
   ],
   "devDependencies": {
     "angular": "~1.2.21",
