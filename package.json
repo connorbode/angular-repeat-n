@@ -1,0 +1,28 @@
+{
+  "name": "angular-repeat-n",
+  "version": "0.0.1",
+  "description": "Angular directive used to repeat an HTML element n times.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "body-parser": "^1.6.2",
+    "express": "^4.8.2",
+    "morgan": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connorbode/angular-repeat-n.git"
+  },
+  "author": "Connor Bode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connorbode/angular-repeat-n/issues"
+  },
+  "homepage": "https://github.com/connorbode/angular-repeat-n"
+}
