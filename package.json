@@ -6,14 +6,17 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "body-parser": "^1.6.2",
     "express": "^4.8.2",
     "gulp": "^3.8.7",
     "gulp-shell": "^0.2.9",
+    "karma": "^0.12.21",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
     "morgan": "^1.2.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "grunt test",
     "start": "node example/server.js"
