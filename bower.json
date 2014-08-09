@@ -5,7 +5,7 @@
   "authors": [
     "Connor Bode <connor.bode@gmail.com>"
   ],
-  "description": "Angular directive used to repeat an HTML element n times.",
+  "description": "Angular directive used to repeat a DOM element n times.",
   "main": "dist/angular-repeat-n.js",
   "keywords": [
     "angular",

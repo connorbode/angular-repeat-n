@@ -1,7 +1,7 @@
 {
   "name": "angular-repeat-n",
   "version": "0.0.1",
-  "description": "Angular directive used to repeat an HTML element n times.",
+  "description": "Angular directive used to repeat a DOM element n times.",
   "main": "index.js",
   "directories": {
     "example": "example"
