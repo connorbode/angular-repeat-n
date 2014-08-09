@@ -8,7 +8,11 @@
   <body ng-app="angular-repeat-n-demo">
     <input type="text" ng-model="repeat">
     <ul>
-      <li ng-repeat-n="repeat">Repeat</li>
+      <li repeat-n="4">Repeat</li>
+    </ul>
+
+    <ul ng-init="blah = [0,1,2,3]">
+      <li ng-repeat="b in blah">Repeater</li>
     </ul>
   </body>
 </html>

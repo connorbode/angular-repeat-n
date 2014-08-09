@@ -1,9 +1,22 @@
 angular.module('angular-repeat-n', [])
 
-  .directive('ngRepeatN', function () {
+  .directive('repeatN', function () {
     return {
       restrict: 'A',
-      link: function (scope, element, attrs) {
+      transclude: 'element',
+      replace: true,
+      link: function (scope, element, attrs, ctrl, $transclude) {
+        var prev = element
+          , i
+          , copy;
+        scope.$watch(attrs.repeatN, function (newValue) {
+          for (i = 0; i < newValue; i += 1) {
+            $transclude(function (clone) {
+              prev.after(clone);
+              prev = clone;
+            });
+          }
+        });
       }
     };
   });
