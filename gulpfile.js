@@ -7,7 +7,12 @@ var gulp = require('gulp')
   , globs = { karmaFiles: 'src/**/*.js' }
   , karmaConf = { browsers: ['PhantomJS'],
                   frameworks: ['jasmine'],
-                  files: ['bower_components/angular/angular.js', globs.karmaFiles] }
+                  files: [
+                    'bower_components/angular/angular.js', 
+                    'bower_components/angular-mocks/angular-mocks.js',
+                    'node_modules/lodash/lodash.js',
+                    globs.karmaFiles
+                  ]}
 
 
 gulp.task('build', function () {
