@@ -21,13 +21,17 @@ angular.module('angular-repeat-n', [])
           var newInt = parseInt(newValue)
             , oldInt = parseInt(oldValue)
             , bothValues = ! isNaN(newInt) && ! isNaN(oldInt)
-            , childScope;
+            , childScope
+            , i
+            , limit;
 
           // decrease number of repeated elements
           if (isNaN(newInt) || (bothValues && newInt < oldInt)) {
-            scope.last = scope.elems[0];
-            for (i = scope.elems.length - 1; i > 1; i -= 1) {
-              scope.parentElem.remove(scope.elems[i]);
+            limit = bothValues ? newInt : 0;
+            scope.last = scope.elems[limit];
+            for (i = scope.elems.length - 1; i > limit; i -= 1) {
+              scope.elems[i].remove();
+              scope.elems.pop();
             }
           } 
 
