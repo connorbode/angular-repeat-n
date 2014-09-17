@@ -79,4 +79,11 @@ describe('angular-repeat-n', function () {
     $scope.$digest();
     expect(elem.children().length).toEqual(4);
   });
+
+  it('can access elements from the parent scope', function () {
+    $scope.repeat = 2;
+    $scope.test = "test";
+    var elem = compile('<div><div ng-repeat-n="repeat">{{test}}</div></div>', $scope);
+    expect(elem.children()[0].innerText).toEqual("test");
+  });
 });
