@@ -16,7 +16,9 @@ angular.module('angular-repeat-n', [])
         // list of elements in the repeater
         scope.elems = [element];
 
-        scope.$watch('repeat', function (newValue, oldValue) {
+        scope.$watch(function () {
+          return parseInt(attrs.ngRepeatN) || scope[attrs.ngRepeatN];
+        }, function (newValue, oldValue) {
 
           var newInt = parseInt(newValue)
             , oldInt = parseInt(oldValue)
@@ -50,9 +52,6 @@ angular.module('angular-repeat-n', [])
             }
           }
         });
-      },
-      scope: {
-        repeat: '=ngRepeatN'
       }
     };
   });
