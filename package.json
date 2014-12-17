@@ -11,7 +11,7 @@
     "angular": "^1.2.19",
     "angular-mocks": "^1.2.19",
     "express": "^4.8.2",
-    "gulp": "^3.8.7",
+    "gulp": "~3.8.10",
     "gulp-jsmin": "^0.1.4",
     "gulp-ngmin": "^0.3.0",
     "gulp-rename": "^1.2.0",
