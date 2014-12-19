@@ -1,1 +1,4 @@
 node_modules
+
+# Common editor directories
+.idea
