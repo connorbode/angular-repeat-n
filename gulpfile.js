@@ -15,7 +15,13 @@ var gulp = require('gulp')
                     'bower_components/angular-mocks/angular-mocks.js',
                     'node_modules/lodash/lodash.js',
                     globs.karmaFiles
-                  ]}
+                  ],
+                  preprocessors: {
+                    'src/**/*.js': ['coverage']
+                  },
+                  reporters: ['progress', 'coverage'],
+                  singleRun: true
+                }
 
 
 gulp.task('build', function () {
