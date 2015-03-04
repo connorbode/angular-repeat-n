@@ -1,6 +1,6 @@
 angular.module('angular-repeat-n', [])
 
-  .directive('ngRepeatN', function () {
+  .directive('ngRepeatN', ['$parse', function ($parse) {
     return {
       restrict: 'A',
       transclude: 'element',
@@ -16,8 +16,11 @@ angular.module('angular-repeat-n', [])
         // list of elements in the repeater
         scope.elems = [element];
 
+        // a getter function to resolve the parameter
+        var getter = $parse(attrs.ngRepeatN);
+
         scope.$watch(function () {
-          return parseInt(attrs.ngRepeatN) || scope[attrs.ngRepeatN];
+          return parseInt(attrs.ngRepeatN) || getter(scope);
         }, function (newValue, oldValue) {
 
           var newInt = parseInt(newValue)
@@ -54,4 +57,4 @@ angular.module('angular-repeat-n', [])
         });
       }
     };
-  });
+  }]);
