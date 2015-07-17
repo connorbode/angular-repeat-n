@@ -5,6 +5,7 @@ angular.module('angular-repeat-n', [])
       restrict: 'A',
       transclude: 'element',
       replace: true,
+      scope: true,
       link: function (scope, element, attrs, ctrl, $transclude) {
 
         // the element to insert after
