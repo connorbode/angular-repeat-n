@@ -30,6 +30,11 @@ describe('angular-repeat-n', function () {
     expect(rootElem.children().length).toEqual($scope.repeat);
   });
 
+  it('repeats multiple elements', function() {
+    var rootElem = compile('<div><div ng-repeat-n="4"></div><div ng-repeat-n="2"></div></div>', $scope);
+    expect(rootElem.children().length).toEqual(6);
+  });
+
   it('does not repeat if the variable is not a number', function () {
     var testVals = [
       'string',
