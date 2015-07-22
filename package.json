@@ -23,7 +23,7 @@
     "lodash": "^2.4.1"
   },
   "scripts": {
-    "test": "grunt test",
+    "test": "gulp test",
     "start": "node example/server.js"
   },
   "repository": {
