@@ -1,5 +1,7 @@
-angular-repeat-n
+angular-repeat-n (looking for maintainer)
 ================
+
+**I no longer maintain this package as I no longer work on any projects related to Angular.  If you find this project useful and use it regularly, please get in touch to discuss taking over the project.  Maintenance overhead should be fairly small as it is a straightforward plugin, but there are a number of small issues being raised for edge cases.**
 
 Angular directive used to repeat an HTML element n times.
 
